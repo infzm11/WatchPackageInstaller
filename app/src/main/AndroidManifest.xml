@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hoinnet.android.packageinstaller"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.hoinnet.android.packageinstaller.App"
+        android:allowBackup="true"
+        android:theme="@style/DialogWhenLarge"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+
+        android:supportsRtl="true">
+        <activity android:name="com.hoinnet.android.packageinstaller.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.hoinnet.android.packageinstaller.InstallerService"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="com.hoinnet.android.packageinstaller.InstallerReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.mltcode.ferace.slienceinstall.request" />
+                <action android:name="com.android.mltcode.ferace.sliencedelete.request" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

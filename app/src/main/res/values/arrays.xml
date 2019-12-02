@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="calorie_progress_colors">
+        <item>@color/calorie_arcColor</item>
+    </array>
+    <array name="sport_progress_colors">
+        <item>@color/sport_arcColor</item>
+    </array>
+    <array name="stand_progress_colors">
+        <item>@color/stand_arcColor</item>
+    </array>
+</resources>

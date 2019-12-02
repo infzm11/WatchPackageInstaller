@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <set android:ordering="sequentially">
+        <objectAnimator
+            android:duration="166"
+            android:propertyName="strokeWidth"
+            android:valueFrom="2"
+            android:valueTo="18"
+            android:valueType="floatType" />
+        <objectAnimator
+            android:duration="16"
+            android:propertyName="strokeWidth"
+            android:valueFrom="18"
+            android:valueTo="2"
+            android:valueType="floatType" />
+        <objectAnimator
+            android:duration="316"
+            android:propertyName="strokeWidth"
+            android:valueFrom="2"
+            android:valueTo="2"
+            android:valueType="floatType" />
+    </set>
+</set>
